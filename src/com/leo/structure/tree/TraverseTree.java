@@ -114,6 +114,10 @@ public class TraverseTree {
 
     /**
      * 层序遍历，按层遍历,借助队列
+     * 根节点入队
+     * 根节点出队
+     * 根节点的子节点入队
+     * 子节点出队，递归上述流程
      */
     private static void layerTraversal(TreeNode root) {
         Queue<TreeNode> queue = new LinkedList<>();
