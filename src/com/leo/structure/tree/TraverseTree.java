@@ -113,7 +113,7 @@ public class TraverseTree {
     }
 
     /**
-     * 层序遍历，按层遍历
+     * 层序遍历，按层遍历,借助队列
      */
     private static void layerTraversal(TreeNode root) {
         Queue<TreeNode> queue = new LinkedList<>();

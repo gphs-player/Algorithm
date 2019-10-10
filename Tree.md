@@ -23,7 +23,7 @@
 <img src="pics/full_tree.png" width="200" height="200">
 
 ##### 完全二叉树
-    所有叶子结点的编号和满二叉树的编号一致，就是完全二叉树
+    将树按照层级顺序编号，所有叶子结点的编号和满二叉树的编号一致，就是完全二叉树。
     
 <img src="pics/complete_tree.png" width="200" height="200">
     
@@ -52,7 +52,7 @@
 
 #### 广度优先
 
- * 层序遍历s
+ * 层序遍历
  
  
 ##### 前序遍历
@@ -72,3 +72,10 @@
  输出顺序：左子树 -> 右子树 -> 根节点
  
  <img src="pics/traverse_3.png" width="200" height="200">
+
+##### 层序遍历
+
+ 按照二叉树的层级关系，逐层遍历每个节点
+ 
+ <img src="pics/layer_traversal.png" width="200" height="200">
+ 
