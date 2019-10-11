@@ -8,7 +8,6 @@ public class Find {
     public static void main(String[] args) {
         int[] arr = {2, 1, 3, 5, 4, 8, 7, 2};
 
-
         HashMap<Integer, Integer> hashMap = new HashMap<>();
 
         for (int i : arr) {
