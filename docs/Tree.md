@@ -22,7 +22,7 @@
 
     所有非叶子结点都存在左右孩子，并且所有叶子结点都在同一层级。
 
-<img src="pics/full_tree.png" width="200" height="200" align="left">
+<img src="../pics/full_tree.png" width="200" height="200" align="left">
 
 #### 完全二叉树
 
