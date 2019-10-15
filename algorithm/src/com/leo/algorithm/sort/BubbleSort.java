@@ -3,7 +3,7 @@ package com.leo.algorithm.sort;
 import java.util.Arrays;
 
 /**
- * 排序算法
+ * 冒泡排序算法
  */
 public class BubbleSort {
 
