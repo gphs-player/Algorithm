@@ -15,8 +15,8 @@ public class QuickSort {
     public static void main(String[] args) {
         int[] arr = new int[]{4, 7, 6, 5, 3, 2, 8, 1};
 //        quickSortDouble(arr, 0, arr.length - 1);
-//        quickSortSingle(arr, 0, arr.length - 1);
-        quickSortStack(arr, 0, arr.length - 1);
+        quickSortSingle(arr, 0, arr.length - 1);
+//        quickSortStack(arr, 0, arr.length - 1);
         System.out.println(Arrays.toString(arr));
     }
 
@@ -100,7 +100,6 @@ public class QuickSort {
         //每轮循环结束后，交换mark位置元素和pivot的基准值
         arr[startIndex] = arr[mark];
         arr[mark] = pivot;
-
         return mark;
     }
 

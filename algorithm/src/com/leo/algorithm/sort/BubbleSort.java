@@ -4,6 +4,14 @@ import java.util.Arrays;
 
 /**
  * 冒泡排序算法
+ *
+ * i=0,第二重循环n-1次
+ * i=1,第二重循环n-2次
+ * ...
+ * 总次数就是（n-1）+（n-2）+...+0
+ * ((n-1)+0) * n /2
+ * (n²-n)/2
+ * 得出时间复杂度 O(n²)
  */
 public class BubbleSort {
 
