@@ -177,3 +177,43 @@ private static void bubbleSort(int arr[]) {
 }
 ```
 
+[参考写法]([https://zh.wikipedia.org/wiki/%E9%B8%A1%E5%B0%BE%E9%85%92%E6%8E%92%E5%BA%8F](https://zh.wikipedia.org/wiki/鸡尾酒排序))
+
+```java
+    private static void sort2(int [] arrs){
+        int left = 0;
+        int right = arrs.length -1;
+        int temp;
+        boolean sorted = true;
+        while (left < right){
+            for (int i = left; i < right; i++) {
+                if (arrs[i] > arrs[i + 1]){
+                    temp = arrs[i + 1];
+                    arrs[i + 1] =arrs[i];
+                    arrs[i] = temp;
+                    sorted = false;
+                }
+            }
+            if (sorted ){
+                break;
+            }
+            sorted = true;
+            System.out.println(">>>"+Arrays.toString(arrs));
+            right --;//最大值到最右
+            for (int i = right; i > left; i--) {
+                if (arrs[i - 1] > arrs[i]){
+                    temp = arrs[i - 1];
+                    arrs[i - 1] = arrs[i ];
+                    arrs[i ] = temp;
+                    sorted = false;
+                }
+            }
+            System.out.println("<<<"+Arrays.toString(arrs));
+            left ++ ;
+            if (sorted ){
+                break;
+            }
+            sorted = true;
+        }
+    }
+```

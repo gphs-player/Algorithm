@@ -17,7 +17,7 @@ public class CocktailSort {
 
     public static void main(String[] args) {
         int[] arr = {2, 3, 4, 5, 6, 7, 8, 1};
-        sort(arr);
+        sort2(arr);
 
     }
 
@@ -56,5 +56,43 @@ public class CocktailSort {
 [1, 2, 3, 4, 5, 6, 7, 8]
 [1, 2, 3, 4, 5, 6, 7, 8]
 */
+    }
+
+    //维基百科上的写法
+    private static void sort2(int [] arrs){
+        int left = 0;
+        int right = arrs.length -1;
+        int temp;
+        boolean sorted = true;
+        while (left < right){
+            for (int i = left; i < right; i++) {
+                if (arrs[i] > arrs[i + 1]){
+                    temp = arrs[i + 1];
+                    arrs[i + 1] =arrs[i];
+                    arrs[i] = temp;
+                    sorted = false;
+                }
+            }
+            if (sorted ){
+                break;
+            }
+            sorted = true;
+            System.out.println(">>>"+Arrays.toString(arrs));
+            right --;//最大值到最右
+            for (int i = right; i > left; i--) {
+                if (arrs[i - 1] > arrs[i]){
+                    temp = arrs[i - 1];
+                    arrs[i - 1] = arrs[i ];
+                    arrs[i ] = temp;
+                    sorted = false;
+                }
+            }
+            System.out.println("<<<"+Arrays.toString(arrs));
+            left ++ ;
+            if (sorted ){
+                break;
+            }
+            sorted = true;
+        }
     }
 }
