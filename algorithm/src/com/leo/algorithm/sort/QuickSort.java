@@ -1,9 +1,6 @@
 package com.leo.algorithm.sort;
 
-import java.util.Arrays;
-import java.util.HashMap;
-import java.util.Map;
-import java.util.Stack;
+import java.util.*;
 
 /**
  * 快速排序
@@ -15,7 +12,7 @@ public class QuickSort {
     public static void main(String[] args) {
         int[] arr = new int[]{4, 7, 6, 5, 3, 2, 8, 1};
 //        quickSortDouble(arr, 0, arr.length - 1);
-        quickSortSingle(arr, 0, arr.length - 1);
+        qsDouble(arr, 0, arr.length - 1);
 //        quickSortStack(arr, 0, arr.length - 1);
         System.out.println(Arrays.toString(arr));
     }
@@ -68,6 +65,34 @@ public class QuickSort {
         arr[left] = pivot;
         System.out.println(left);
         return left;
+    }
+
+    private static void qsDouble(int arr[], int start, int end) {
+
+        if (start >= end) {
+            return;
+        }
+        int newIndex = q(arr, start, end);
+        qsDouble(arr, start, newIndex - 1);
+        qsDouble(arr, newIndex + 1, end);
+
+    }
+
+    private static int q(int arr[], int start, int end) {
+
+       int mark = start;
+       int pivot  = arr[start];
+        for (int i = start; i <= end; i++) {
+            if (arr[i] < pivot){
+                mark++;
+                int temp = arr[i];
+                arr[i] = arr[mark];
+                arr[mark] = temp;
+            }
+        }
+        arr[start] = arr[mark];
+        arr[mark] = pivot;
+        return mark;
     }
 
 
@@ -124,14 +149,14 @@ public class QuickSort {
 
             if (param.get("startIndex") < piviot - 1) {
                 Map<String, Integer> leftParam = new HashMap<>();
-                leftParam.put("startIndex",param.get("startIndex"));
-                leftParam.put("endIndex",piviot - 1);
+                leftParam.put("startIndex", param.get("startIndex"));
+                leftParam.put("endIndex", piviot - 1);
                 quickSortStack.push(leftParam);
             }
-            if (piviot + 1 < param.get("endIndex")){
+            if (piviot + 1 < param.get("endIndex")) {
                 Map<String, Integer> rightParam = new HashMap<>();
-                rightParam.put("startIndex",piviot + 1);
-                rightParam.put("endIndex",param.get("endIndex"));
+                rightParam.put("startIndex", piviot + 1);
+                rightParam.put("endIndex", param.get("endIndex"));
                 quickSortStack.push(rightParam);
             }
         }

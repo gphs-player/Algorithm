@@ -20,8 +20,8 @@ public class BubbleSort {
 //        bubbleSort(arr);
 //        bubbleSort2(arr);
         int[] arr3 = new int[]{3, 4, 2, 1, 5, 6, 7, 8};
-        bubbleSort3(arr3);
-//        System.out.println(Arrays.toString(arr));
+//        bubbleSort3(arr3);
+        System.out.println(Arrays.toString(arr3));
     }
 
     private static void bubbleSort(int arr[]) {

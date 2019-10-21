@@ -63,6 +63,8 @@ private static int partitionDouble(int[] arr, int startIndex, int endIndex) {
 
 ​	把mark指针右移一位，因为小于pivot的元素多了一个，然后让最新遍历到的元素和mark指针的元素互相交换，因为最新的元素属于最小pivot的区域。
 
+​	循环结束之后，交换pivot和mark的值。
+
 ```java
 private static void quickSortSingle(int arr[], int startIndex, int endIndex) {
     if (startIndex >= endIndex) {

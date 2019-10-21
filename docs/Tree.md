@@ -32,7 +32,7 @@
 * 最下层叶子一定在左边连续位置
 * 倒数第二层，如果有叶子一定在右边
 
-<img src="pics/complete_tree.png" width="200" height="200" align="left">
+<img src="../pics/complete_tree.png" width="200" height="200" align="left">
 
    
 
@@ -42,13 +42,13 @@
 * 如果右子树不为空，则右子树上所有节点的值均大于根节点的值
 * 左、右子树也都是二叉查找树 
 
-<img src="pics/tree_find.png" width="200" height="200" align="left">
+<img src="../pics/tree_find.png" width="200" height="200" align="left">
 
 #### 二叉排序树
 
 二叉查找树的别名，按照二叉查找树的规则进行插入
 
-<img src="pics/tree_sort.png" width="200" height="200" align="left">
+<img src="../pics/tree_sort.png" width="200" height="200" align="left">
 
 
 ### 遍历
@@ -67,25 +67,53 @@
 
  输出顺序：根节点 -> 左子树 -> 右子树
 
- <img src="pics/traverse_1.png" width="200" height="200">
+ <img src="../pics/traverse_1.png" width="200" height="200">
 
 ##### 2.中序遍历
 
  输出顺序：左子树 -> 根节点 -> 右子树
 
- <img src="pics/traverse_2.png" width="200" height="200">
+ <img src="../pics/traverse_2.png" width="200" height="200" align="left">
+
+
+
+
+
+
+
+
+
+
 
 ##### 3.后序遍历
 
  输出顺序：左子树 -> 右子树 -> 根节点
 
- <img src="pics/traverse_3.png" width="200" height="200">
+ <img src="../pics/traverse_3.png" width="200" height="200" align="left">
+
+
+
+
+
+
+
+
+
+
 
 ##### 4.层序遍历
 
  按照二叉树的层级关系，逐层遍历每个节点
 
- <img src="pics/layer_traversal.png" width="200" height="200">
+ <img src="../pics/layer_traversal.png" width="200" height="200" align="left">
+
+
+
+
+
+
+
+
 
 
 
