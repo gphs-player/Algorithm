@@ -117,6 +117,8 @@ private static void bubbleSort(int arr[]) {
 
 <img src="../../pics/cocktail_1.png" width=400 height=400 align=left>
 
+
+
 就交换一个元素，用了七轮比较，会不会有点憋屈?
 
 鸡尾酒的做法就是把冒泡排序的过程从单向变成双向:
