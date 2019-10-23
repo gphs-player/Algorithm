@@ -65,3 +65,15 @@ private static void headSort(int arr[]) {
     }
 }
 ```
+
+
+
+### 复杂度分析
+
+“下沉”操作是算法的基础，时间复杂度为O(logn)
+
+构建二叉堆的时间复杂度，O(n)
+
+循环删除并下沉调整堆顶，O(nlogn)
+
+所以整体的时间复杂度是O(nlogn)
