@@ -77,3 +77,9 @@ private static void headSort(int arr[]) {
 循环删除并下沉调整堆顶，O(nlogn)
 
 所以整体的时间复杂度是O(nlogn)
+
+空间复杂度O(1)
+
+### 最坏情况
+
+O(nlogn)

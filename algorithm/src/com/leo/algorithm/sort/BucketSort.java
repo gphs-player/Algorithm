@@ -30,16 +30,12 @@ public class BucketSort {
                 min = arr[i];
             }
         }
-        //
-        double d = max - min;
-
-
 
         //初始化桶
-
         int bucketNum = arr.length;
         ArrayList<LinkedList<Double>> bucketList = new ArrayList<>(bucketNum);
-
+        //每个桶的区间长度，步长
+        double d = max - min;
         double step = d/(bucketNum - 1);
         for (int i = 0; i < bucketNum; i++) {
             bucketList.add(new LinkedList<>());
