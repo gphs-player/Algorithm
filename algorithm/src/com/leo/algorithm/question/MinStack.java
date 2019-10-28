@@ -9,18 +9,18 @@ public class MinStack {
 
     public static void main(String [] args){
         MinStack stack = new MinStack();
-        stack.push(4);
-        stack.push(9);
-        stack.push(7);
-        stack.push(3);
-        stack.push(8);
-        stack.push(5);
+        stack.pushA(4);
+        stack.pushA(9);
+        stack.pushA(7);
+        stack.pushA(3);
+        stack.pushA(8);
+        stack.pushA(5);
 
         System.out.println(stack.getMin());
-        stack.pop();
-        stack.pop();
-        stack.pop();
-        System.out.println(stack.getMin());
+        System.out.println(stack.popA());
+        System.out.println(stack.popA());
+        System.out.println(stack.popA());
+        System.out.println(stack.getMinA());
     }
 
 
@@ -53,8 +53,27 @@ public class MinStack {
         return stack.get(stack.size()-2);
     }
 
-    public int getMin() {
-        return stack.peek();
+    public int getMinA() {
+        return minStack.peek();
+    }
+
+
+
+    public void pushA(int element){
+        mainStack.push(element);
+        if(minStack.isEmpty() || element <= minStack.peek()){
+            minStack.push(element);
+        }
+    }
+    public Integer popA(){
+        if(mainStack.peek().equals(minStack.peek())){
+            minStack.pop();
+        }
+        return mainStack.pop();
+    }
+
+    public Integer getMin(){
+        return minStack.peek();
     }
 
 }
