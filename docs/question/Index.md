@@ -8,3 +8,5 @@
 
 ### [5.利用栈实现队列](./StackQueue.md)
 
+[6.整数全排列下一个整数](./NextPermutation.md)
+
