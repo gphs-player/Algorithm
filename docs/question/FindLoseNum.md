@@ -28,4 +28,38 @@
 
 ​	刚才的数组，有98个整数出现了偶数次，只有2个整数出现了奇数次，找到这两个数？
 
+​	将所有数字进行异或运算，得到的结果就是两个数字的异或结果，比如运算结果是`0000 0110B`，结果中肯定会至少有一位是1，选定其中一位1，那么两个数字在这位上肯定是不等的，如例子中的倒数第二位。依次可以将数组分为两组，第一组的倒数第二位是0，第二组的倒数第二位是1。然后分别将两组进行异或运算，求出最终结果。
+
+#### 代码
+
+```java
+private static int [] findLostNums(int [] array){
+    //用于存储结果
+    int result[] = new int[2];
+    int xorResult = 0;
+    for (int i = 0; i < array.length; i++) {
+        xorResult ^= array[i];
+    }
+    //如果所有数字运算结果是0，说明题目不符合要求
+    if (xorResult == 0){
+        return null;
+    }
+
+    //确定2个整数的不同位，以此分组
+    int separator =1;
+    while ( 0 == (xorResult&separator)){
+        separator<<=1;
+    }
+    for (int i = 0; i < array.length; i++) {
+        //两个数被分为两个组，每个组的异或运算值的最终结果都是求的数
+        if (0 == (array[i]&separator)){
+            result[0]^=array[i];
+        }else {
+            result[1]^=array[i];
+        }
+    }
+    return result;
+}
+```
+
 ​	
