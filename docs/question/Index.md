@@ -10,3 +10,9 @@
 
 [6.整数全排列下一个整数](./NextPermutation.md)
 
+### [7.一个整数删除k个数字后的最大值](./RemoveKDigit.md)
+
+### [8.两个大数相加](./BigNumSum.md)
+
+### [9.缺失一个数？](./FindLoseNum.md)
+
