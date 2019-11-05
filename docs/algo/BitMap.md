@@ -97,3 +97,7 @@ public class BitMap {
     }
 }
 ```
+
+参考
+
+[Java源码BitSet.java]
