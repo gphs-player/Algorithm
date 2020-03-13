@@ -2,7 +2,7 @@
 
 #### [二、树](./docs/Tree.md)
 
-#### [三、排序算法](./docs/Algorithm.md)
+#### [三、排序算法](./docs/Sort.md)
 
 #### [四、其他算法](./docs/Algorithm.md)
 
