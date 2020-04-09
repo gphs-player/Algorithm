@@ -6,14 +6,14 @@
 
 * [冒泡排序](./sort/BubbleSort.md)
 * 选择排序
-* 插入排序
-* 希尔排序（略优于O(n²)）
+* [插入排序](./sort/InsertSort.md)
+* [希尔排序（略优于O(n²)）](./sort/ShellSort.md)
 
 #### 2.O(nlogn)的排序算法
 
 * [快速排序](./sort/QuickSort.md)
 * 归并排序
-* [堆排序](./sort/HeapSort.md)
+* [堆排序](./sort/HeapSort.md)                                                                               
 
 #### 3.线性时间复杂度的排序算法
 

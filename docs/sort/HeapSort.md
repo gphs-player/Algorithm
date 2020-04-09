@@ -2,7 +2,7 @@
 
 
 
-### 回顾二叉堆
+### 回顾堆
 
 最大堆的堆顶是整个堆中的最大元素
 
@@ -14,15 +14,17 @@
 
 ### 思路
 
-将无序数组构建成二叉堆（根据需求决定是最大堆还是最小堆）；
+将无序数组构建成堆（根据需求决定是最大堆还是最小堆）
 
 循环删除堆顶的元素，并将元素放置堆的末位；
 
-调整二叉堆（已经删除的元素不在调整之内），产生新的二叉堆。
+调整堆（已经删除的元素不在调整之内），产生新的堆
 
 
 
 ### 代码
+
+#### while实现
 
 ```java
 //下沉操作
@@ -50,7 +52,7 @@ private static void downAdjust(int[] arr, int parentIndex, int length) {
  * 堆排序  升序
  */
 private static void headSort(int arr[]) {
-    //从最后一个结点开始，构建最大堆 O(n)
+    //从最后一个父结点开始，构建最大堆 O(n)
     for (int i = (arr.length - 2) / 2; i >= 0; i--) {
         downAdjust(arr, i, arr.length);
     }
@@ -66,7 +68,43 @@ private static void headSort(int arr[]) {
 }
 ```
 
+#### for实现
 
+```java
+private static void perDown(int[] arr, int i, int n) {
+    int child;
+    int tmp;
+    for (tmp = arr[i]; leftChild(i) < n; i = child) {
+        child = leftChild(i);
+        if (child != n - 1 && arr[child] < arr[child + 1]) {
+            child++;
+        }
+        if (tmp < arr[child]) {
+            arr[i] = arr[child];
+        } else {
+            break;
+        }
+    }
+    arr[i] = tmp;
+}
+
+private static int leftChild(int i) {
+    return 2 * i + 1;
+}
+
+public static void heapSort(int[] arr) {
+    //首先构建一个堆，
+    for (int i = arr.length / 2 - 1; i >= 0; i--) {
+        perDown(arr, i, arr.length);
+    }
+    for (int i = arr.length - 1; i > 0; i--) {
+        int temp = arr[i];
+        arr[i] = arr[0];
+        arr[0] = temp;
+        perDown(arr, 0, i);
+    }
+}
+```
 
 ### 复杂度分析
 
