@@ -6,7 +6,7 @@
 
 ### [4.一个数是否为2的整数次幂](./PowerOf2.md)
 
-### [5.利用栈实现队列](./StackQueue.md)
+### [5.栈和队列相互实现](./StackQueue.md)
 
 [6.整数全排列下一个整数](./NextPermutation.md)
 
@@ -19,4 +19,16 @@
 ### [10.红包均衡分配](./LuckyMoney.md)
 
 ### [11.非递归方式遍历指定目录下文件]()
+
+### [12.寻找二维数组中的某个元素](./findNumIn2DArrays.md)
+
+### [13.替换空格](./StringReplace.md)
+
+### [14.从尾部到头部遍历链表](./ReverseLinkedList.md)
+
+### [15.构建二叉树](./CreateBinaryTree.md)
+
+### [16.旋转数组求最小值](./RotateArr.md)
+
+### [17.斐波那契数列](./fibonacci.md)
 

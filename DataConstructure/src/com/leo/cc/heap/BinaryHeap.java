@@ -1,8 +1,5 @@
 package com.leo.cc.heap;
 
-import com.sun.org.apache.regexp.internal.RE;
-import org.omg.CORBA.Any;
-
 public class BinaryHeap<AnyType extends Comparable<AnyType>> {
 
     private int currentSize;
