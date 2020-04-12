@@ -32,3 +32,23 @@
 
 ### [17.斐波那契数列](./fibonacci.md)
 
+### [18.单例的实现](./Singleton.md)
+
+### [19.计算一个数的二进制有多少位1](./Count1InBinary.md)
+
+[20.打印1到n位的最大数](./Print1ToMaxOfNDigits.md)
+
+### [21.O(1)时间删除链表结点](./DeleteLinkedNode.md)
+
+### [22.交换数组中奇偶数的位置](./ChangeOddEven.md)
+
+### [23.找到链表倒数第K个节点](./FindKthToTail.md)
+
+### [24.反转链表](./ReverseLink.md)
+
+### [25.合并两个有序的链表](./MergeOrderedLink.md)
+
+### [26.二叉树的子树结构](./IsSubBinaryTree.md)
+
+### [27.镜像二叉树](./MirrorBinaryTree.md)
+

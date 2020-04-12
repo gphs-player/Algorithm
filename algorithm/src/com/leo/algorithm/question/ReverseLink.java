@@ -1,69 +1,50 @@
 package com.leo.algorithm.question;
 
-import java.util.Stack;
 
+import static com.leo.algorithm.question.DeleteLinkedNode.LinkedNode;
+
+/**
+ * 反转链表，不是倒序输出，而是链表的指针全部反向指引
+ */
 public class ReverseLink {
 
 
     public static void main(String[] args) {
 
+        LinkedNode head = new LinkedNode(1);
 
-        ListNode link = createLink();
+        LinkedNode second = new LinkedNode(2);
+        LinkedNode third = new LinkedNode(3);
+        LinkedNode fourth = new LinkedNode(4);
+        LinkedNode fifth = new LinkedNode(5);
+        head.next = second;
+        second.next = third;
+        third.next = fourth;
+        fourth.next = fifth;
 
-        reverse(link);
-        System.out.println("-----");
-        reverseRecursive(link);
-
+        System.out.println(reverse(head).value);
     }
 
-    /**
-     * 借助栈实现
-     */
-    private static void reverse(ListNode link) {
-        if (link == null) return;
-        Stack<ListNode> ls = new Stack<>();
-        ListNode node = link;
-        while (node != null) {
-            ls.push(node);
-            node = node.next;
+    private static LinkedNode reverse(LinkedNode node) {
+
+        if (node == null) return null;
+
+        LinkedNode reverseHead = null;
+        LinkedNode mCur = node;
+        LinkedNode pre = null;
+
+        while (mCur != null) {
+            LinkedNode nextNode = mCur.next;
+            if (nextNode == null){
+                //这个时候反转链表的头结点就找到了
+                reverseHead = mCur;
+            }
+            mCur.next = pre;
+            pre = mCur;
+            mCur = nextNode;
         }
-        while (!ls.empty()) {
-            ListNode pop = ls.pop();
-            System.out.println(pop);
-        }
-    }
-
-
-    private static void reverseRecursive(ListNode link) {
-        if (link == null) throw new NullPointerException("reverseRecursive::: param can not be null !!!");
-        if (link.next != null) {
-            reverseRecursive(link.next);
-        }
-        System.out.println(link);
-    }
-
-
-    private static ListNode createLink() {
-        ListNode head = new ListNode(1);
-        head.next = new ListNode(2);
-        head.next.next = new ListNode(3);
-        head.next.next.next = new ListNode(4);
-        head.next.next.next.next = new ListNode(5);
-        return head;
+        return reverseHead;
     }
 
 
-    static class ListNode {
-        public ListNode(int value) {
-            this.value = value;
-        }
-
-        int value;
-        ListNode next;
-
-        @Override
-        public String toString() {
-            return "value=" + value;
-        }
-    }
 }
