@@ -52,3 +52,11 @@
 
 ### [27.镜像二叉树](./MirrorBinaryTree.md)
 
+### [28.顺时针打印矩阵](./PrintMatrix.md)
+
+### [29.栈的压入弹出序列](./StackPushPopOrder.md)
+
+### [30.从上到下遍历二叉树](./LayerTraverseTree.md)
+
+### [31.二叉搜索树的后序遍历序列](./BinaryTreePostorder.md)
+

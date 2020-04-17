@@ -48,8 +48,6 @@ stack.pop();
 stack.pop();
 stack.pop();//依次将 5，8，3出栈，4才是最小值
 System.out.println(stack.getMin())；//有元素出栈之后，获取第二小
-
-
 ```
 
 
