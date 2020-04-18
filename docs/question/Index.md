@@ -60,3 +60,9 @@
 
 ### [31.二叉搜索树的后序遍历序列](./BinaryTreePostorder.md)
 
+### [32.和为某个数字的二叉树的路径](./FindPath.md)
+
+### [33.二叉搜索树转为有序双向链表](./ConvertBST2DLink.md)
+
+[34.复杂链表的复制](./ComplexLinkClone.md)
+
