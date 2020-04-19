@@ -66,3 +66,8 @@
 
 [34.复杂链表的复制](./ComplexLinkClone.md)
 
+### [35.字符全排列](./CharPermutation.md)
+
+### [36.数组中出现次数超过一半的数字](./MoreThanHalf.md)
+
+[37.最小的K个数字](./LeastKNum.md)
